@@ -1,6 +1,6 @@
-let num1 = 2;
-let num2 = 3;
-let operador = "*";
+let num1 = 20;
+let num2 = 36;
+let operador = "+";
 
 switch(operador){
   case '+':

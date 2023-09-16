@@ -1,6 +1,6 @@
-let perfil = "administrador";
+let perfil = "Administrador";
 
-if (perfil == "administrador") {
+if (perfil == "administrador" || perfil == "Administrador" || perfil == "ADMINISTRADOR" ) {
   console.log("Usted tiene todo los privilegios de uso de sistema");
 }else if (perfil == "asistente") {
   console.log("Usted solo tiene permisos de registrar, modificar y consultar datos");
