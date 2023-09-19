@@ -1,24 +1,38 @@
 //hamburguesas
-let tipoHamburguesa = 1800;
+let costo = 0;
+let carne = 1800;
 let pollo = 1500;
 let vegetariana = 1200;
-//adicionales
-let jamon = (a) => a == true ? a = 20 : " ";
-let queso = true;
-let salsaDeTomate = true;
-let mayonesa = true;
-let mostaza = true;
-let tomate = true;
-let lechuga = true;
-let cebolla = true;
 
+function callBack(tipo, jamon, queso, salsaDeTomate, mayonesa, mostaza, tomate, lechuga, cebolla) {
 
-// let totalPagar = (b,c,d,e,f,g,h,i, tipo) => tipo(b + c + d + e + f + g + h + i)
+  if(jamon == true){costo = costo + 30;}
+  if(queso == true){costo = costo + 25;}
+  if(salsaDeTomate == true){costo = costo + 5;}
+  if(mayonesa == true){costo = costo + 5;}
+  if(mostaza == true){costo = costo + 5;}
+  if(tomate == true){costo = costo + 15;}
+  if(lechuga == true){costo = costo + 10;}
+  if(cebolla == true){costo = costo + 10;}
 
+  if(tipo == "carne"){
+    return costo = costo + carne;
+  }else if(tipo == "pollo"){
+    return costo = costo + pollo;
+  }else if( tipo == "vegetariana"){
+    return costo = costo + vegetariana;
+  }else {
+    return "Teienes que elegir una hamburguesa";
+  }
 
-function totalPagar(a,b) {
-  queso == true 
 }
+
+function ticket(nombre, apellido, monto) {
+  return 'Estimado ' + nombre + ' ' + apellido + ', el monto total a pagar es de: ' + monto;
+}
+
+console.log(ticket("Juan", "Cotera",callBack("carne", 0,1,1,1,1,0,1,0)))
+
 
 
 
