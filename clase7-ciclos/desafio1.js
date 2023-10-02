@@ -14,15 +14,16 @@ function callBack(operaciones){
       depositos = depositos + dinero;
     }
   }
-  return console.log('El monto toal de los depositos es de: $' + depositos + '\n'+
+  let saldoTotal = depositos - retiros
+  return console.log('El monto total de los depositos es de: $' + depositos + '\n'+
                     'El monto total de los retiros es de: $' + retiros + '\n'+
-                    'Por lo tanto, su saldo actual en la es de: $' + (depositos - retiros)
+                    'Por lo tanto, su saldo actual en la es de: $' + (saldoTotal)
   )
 }
 
 function datos(nombre, apellido){
   if(nombre == '' && apellido == ''){
-    return console.log('Debe ingresar sus datos.')
+    return console.log('Debe ingresar sus datos Usuario Anonimo.')
   } else{
     return console.log('Estimad@ ' + nombre + ' ' + apellido);
   }

@@ -8,14 +8,14 @@
 
 // mostrarSiguientes(13);
 
-//2 Imprimir los números entre el 1 y el 57, saltando de tres en tres.
-// function saltandoEnTres(){
-//   for(let i = 0; i <= 57;i = i + 3){
-//     console.log(i)
-//   }
-// }
+// 2 Imprimir los números entre el 1 y el 57, saltando de tres en tres.
+function saltandoEnTres(){
+  for(let i = 0; i <= 57;i += 3){
+    console.log(i)
+  }
+}
 
-// saltandoEnTres()
+saltandoEnTres()
 
 //3 Escribir un programa que muestre la sumatoria de todos los números entre el 0 y el 100.
 // function sumaTodos(){

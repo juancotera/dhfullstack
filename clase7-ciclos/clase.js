@@ -25,16 +25,16 @@
 // tablaDeMultiplicar(5)
 
 //TABLA DE MULTIPLICAR USANDO WHILE
-function tablaDeMultiplicar(numero) {
-  //Escribí tu código aquí
-   let contador = 0;
-   while(contador <= 10){
-     console.log(numero + ' * ' + contador + ' = ' + (numero * contador))
-     contador++
-   }
-}
+// function tablaDeMultiplicar(numero) {
+//   //Escribí tu código aquí
+//    let contador = 0;
+//    while(contador <= 10){
+//      console.log(numero + ' * ' + contador + ' = ' + (numero * contador))
+//      contador++
+//    }
+// }
 
-tablaDeMultiplicar(7)
+// tablaDeMultiplicar(7)
 
 //medir un ARRAY E IR TIRENDO LAS SUMAS
 // function gananciaTotal(unPeriodo) {
