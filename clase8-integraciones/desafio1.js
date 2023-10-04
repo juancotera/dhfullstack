@@ -1,8 +1,28 @@
-let multidimensional = [["html5", 4000], ["css3", 5000], ["javascript", 10000], ["react",7000], ["nodejs", 15000]];
-let cursos = ['HTML5', 'CSS3', 'JAVASCRIPT', 'REACT', 'NODE'];
+let cursos = [["html5", 4000], ["css3", 5000], ["javascript", 10000], ["react",7000], ["nodejs", 15000]];
+let pedido = ['HTML5', 'CSS3', 'JAVASCRIPT', 'NODEJS'];
+//, 'REACT'
 
-function callback(multidimensional, arrayCursos){
-  console.log(multidimensional[1][0])
+function costoTotal(cursosArray, pedidoArray){
+  let pagar = 0
+  let lista = 0
+  for(let i = 0; i < cursosArray.length; i++){
+    let toma = cursosArray[i][0].toUpperCase();
+    if( pedidoArray.includes(toma) == true){
+      let tomaPrecio = cursosArray[i][1];
+      pagar += tomaPrecio;
+      lista++;
+      console.log(lista + '.- '+ toma)
+    }else{
+      // console.log('no lo tengo')
+    }
+  }
+  console.log('El monto total a pagar es de: $' + pagar);
 }
 
-callback(multidimensional, cursos)
+function datos(nombre, apellido){
+  console.log('Estimado '+ nombre +' '+apellido+ ', en función de los cursos seleccionados:');
+  costoTotal(cursos, pedido);
+  console.log('Bienvenido a la gran aventura Digital House.');
+}
+
+datos('Juan', 'Cotera');
