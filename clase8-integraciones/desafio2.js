@@ -47,17 +47,8 @@ function graduados(html, css, js, nodejs, numero){
   }
 }
 
-function arrayHTML(){
-  return gHTML.split(",");
-}
-function arrayCSS3(){
-  return gCSS3.split(",");
-}
-function arrayJS(){
-  return gJS.split(",");
-}
-function arrayNODEJS(){
-  return gNODEJS.split(",");
+function array(string){
+  return string.split(",");
 }
 
-graduados(arrayHTML(), arrayCSS3(), arrayJS(), arrayNODEJS(), 4)
+graduados(array(gHTML), array(gCSS3), array(gJS), array(gNODEJS), 3)
