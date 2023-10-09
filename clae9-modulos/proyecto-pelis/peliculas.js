@@ -22,7 +22,7 @@ let peliculas = [
     duration : 268,
     price : 14,
     genre : 'Suspenso'
-  },
+  }
 ]
 
 module.exports = peliculas;

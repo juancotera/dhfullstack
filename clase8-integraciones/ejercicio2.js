@@ -22,10 +22,3 @@ function reporteDePasajeros(paradas){
 
 reporteDePasajeros(6);
 
-
-
-
-var car = "vmw";
-let animal = "dog";
-const pi = 3.1416;
-

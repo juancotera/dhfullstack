@@ -1,4 +1,4 @@
-const peliculas = require('./peliculas');
+const peliculas = require('./peliculas.js');
 let fs = require('fs');
 let mensaje = fs.readFileSync(__dirname + '/mensaje.txt', 'utf-8');
 console.log(mensaje);
@@ -12,7 +12,7 @@ function mostrarPelis(pelis){
     let duration = pelis[i].duration;
     let price = pelis[i].price;
     let genre = pelis[i].genre;
-    console.log(`
+  console.log(`
     PELICULA ${indice}:
     id: ${id}
     rating: ${rating}
