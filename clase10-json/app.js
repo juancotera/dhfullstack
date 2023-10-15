@@ -31,8 +31,37 @@ let dhBici = {
   },
   totalDeVentas : function(){
     bicisVendidas = bicis.filter((libre) => libre.Vendida == true);
-    return bicisVendidas
+    let sumaVentas = bicisVendidas.reduce((acum, bicicleta) => {
+      return acum + bicicleta.Precio;
+    },0) //acumulador es la acumulación parcial de la suma y se inicializa en 0.
+    return sumaVentas;
+  },
+
+  aumentoBici : function(porcent){
+    let bicisConAumento = this.bicicletas.map(function(num){
+      let precioAumentado = num.Precio + (num.Precio * (porcent / 100 ))
+      num.Precio = precioAumentado
+      return precioAumentado
+    })
+    // return bicisConAumento
+    return this.bicicletas
+  },
+
+  biciporRodado: function(nRodado){
+    let rodadoBici = bicis.filter(function(num){
+      return num.Rodado == nRodado
+    })
+    return rodadoBici
+  },
+
+  listarTodasLasBicis: function(){
+    let mostrar = bicis.forEach(element => {
+      console.log(element)
+    });
+
+    return mostrar
   }
 }
 
-console.log(dhBici.totalDeVentas())
+// console.log(dhBici.biciporRodado(16));
+dhBici.listarTodasLasBicis();
