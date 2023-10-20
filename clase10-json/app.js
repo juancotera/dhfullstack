@@ -65,3 +65,5 @@ let dhBici = {
 
 // console.log(dhBici.biciporRodado(16));
 dhBici.listarTodasLasBicis();
+
+
