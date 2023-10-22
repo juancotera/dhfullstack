@@ -10,7 +10,17 @@ const concesionaria = {
       }
     }
     return null; // Devuelve null si no se encuentra
-   }
+   },
+   venderAuto : function(patente){
+    let autoEncontrado = this.buscarAuto(patente);
+    if(autoEncontrado){
+      autoEncontrado.vendido = true;
+      return autoEncontrado;
+    }
+   },
+  autosParaLaVenta : function() {
+
+  }
 };
 
-console.log(concesionaria.buscarAuto('APL123'))
+console.log(concesionaria.venderAuto('APL123'))
