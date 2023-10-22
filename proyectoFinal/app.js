@@ -4,13 +4,13 @@ const concesionaria = {
     /* completar */
    autos: autosImportados,
    buscarAuto : function(patente){
-    let devuelve = this.autos.filter(function(e){
-      return patente == e.patente
-    });
-    if(devuelve.length == 0){
-      return null
-    }else{
-      return devuelve[0]
+    for (const auto of this.autos) {
+      if (auto.patente === patente) {
+        return auto; // Devuelve el objeto completo si se encuentra
+      }
     }
+    return null; // Devuelve null si no se encuentra
    }
 };
+
+console.log(concesionaria.buscarAuto('APL123'))
