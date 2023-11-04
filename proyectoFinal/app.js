@@ -38,7 +38,37 @@ const concesionaria = {
     .filter((auto) => auto.vendido == true)
     .map((auto) => auto.precio);
     return listaPrecios;
+  },
+  totalDeVentas : function(){
+    let precios = this.listaDeVentas();
+    return precios.reduce((total, precio) => total + precio, 0);
+  },
+
+  puedeComprar : function(auto, persona){
+    return auto.precio <= persona.capacidadDePagoTotal && persona.capacidadDePagoEnCuotas >= auto.precio / auto.cuotas;
+  },
+  autosQuePuedeComprar : function(persona){
+    let autosParaLaVenta = this.autosParaLaVenta();
+    let autoQuePuedeComprar = autosParaLaVenta.filter((auto) => this.puedeComprar(auto, persona));
+    return autoQuePuedeComprar
   }
 };
 
-console.log(concesionaria.listaDeVentas())
+let auto = {
+  marca : 'Ford',
+  modelo: 'Fiesta',
+  precio : 150000,
+  km : 200,
+  color : 'Azul',
+  cuotas : 12,
+  anio : 2019,
+  patente : 'APL123',
+  vendido : true
+}
+let persona = {
+  nombre: 'Juan',
+  capacidadDePagoEnCuotas: 30000,
+  capacidadDePagoTotal: 100000000
+}
+
+console.log(concesionaria.autosQuePuedeComprar(persona))
